@@ -28,7 +28,7 @@ twitter_username: _femi__
 github_username:  falamu
 
 # Build settings
-theme: type-on-strap
+theme: minima
 plugins:
   - jekyll-feed
 
