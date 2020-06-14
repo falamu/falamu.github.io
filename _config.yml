@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Words with Friends
+title: Do Androids Dream of Eclectic Sheep?
 email: femialamu@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Curious about the world. Learning to be kind.
@@ -29,6 +29,7 @@ github_username:  falamu
 
 # Build settings
 theme: minima
+# remote-theme: sylhare/Type-on-Strap
 plugins:
   - jekyll-feed
 
