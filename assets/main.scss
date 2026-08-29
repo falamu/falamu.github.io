@@ -65,6 +65,33 @@ a:focus-visible {
   background: rgba($paper, 0.97);
 }
 
+.home-link {
+  position: absolute;
+  top: 42px;
+  left: 46px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+}
+
+.home-link span {
+  width: 14px;
+  height: 14px;
+  background: $accent;
+  transition: transform 150ms ease;
+}
+
+.home-link:hover span,
+.home-link:focus-visible span {
+  transform: scale(1.15);
+}
+
+.home-link:focus-visible {
+  outline: 1px solid $ink;
+  outline-offset: 2px;
+}
+
 .site-nav {
   display: flex;
   flex-direction: column;
@@ -358,17 +385,26 @@ a:focus-visible {
   .site-header {
     position: sticky;
     inset: 0 0 auto;
+    display: flex;
+    align-items: center;
     width: 100%;
     border-right: 0;
     border-bottom: 1px solid $rule;
   }
 
+  .home-link {
+    position: static;
+    flex: 0 0 36px;
+    margin-left: 12px;
+  }
+
   .site-nav {
+    flex: 1 1 auto;
     flex-direction: row;
     justify-content: space-between;
     gap: 16px;
     overflow-x: auto;
-    padding: 21px 24px 22px;
+    padding: 21px 24px 22px 8px;
   }
 
   .nav-link {
