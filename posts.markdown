@@ -1,6 +1,5 @@
 ---
-layout: page
+layout: home
 title: Posts
 permalink: /posts/
 ---
-

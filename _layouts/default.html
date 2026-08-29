@@ -5,15 +5,13 @@
 
   <body>
 
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <main class="site-main" id="main-content" aria-label="Content">
+      {{ content }}
     </main>
-
-    {%- include footer.html -%}
 
   </body>
 

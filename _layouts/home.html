@@ -2,33 +2,28 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<section class="content-shell index-page">
+  <header class="page-kicker">
+    <img class="page-mark" src="{{ "/assets/femi-mark.png" | relative_url }}" alt="">
+    <h1>{{ page.title | default: "Posts" | escape }}</h1>
+  </header>
 
-  {{ content }}
+  <div class="standard-content">{{ content }}</div>
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
+      {%- assign post_content = post.content | strip -%}
+      {%- if post_content != "" -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        <a class="post-row" href="{{ post.url | relative_url }}">
+          <span class="post-title">{{ post.title | escape }}</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+        </a>
       </li>
+      {%- endif -%}
       {%- endfor -%}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
-
-</div>
+</section>

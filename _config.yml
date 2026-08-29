@@ -19,33 +19,20 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Femi Alamu
-email: femi.i.alamu@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  In labouring to be concise, I become obscure.
+description: Notes, projects, reading, and other things by Femi Alamu.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: _femi__
-github_username:  falamu
-
 # Build settings
 theme: minima
-
-minima:
-  skin: dark
 
 disqus:
   shortname: femialamu
 
-header_pages:
-  - posts.markdown
-  - projects.markdown
-  - books.markdown
-  - about.markdown
-
-# remote-theme: sylhare/Type-on-Strap
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
+
+exclude:
+  - design-qa.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
